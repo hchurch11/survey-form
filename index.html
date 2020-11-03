@@ -1,226 +1,111 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;1,300;1,500&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Survey Form</title>
-		<meta charset="UTF-8" />
-	</head>
 
-	<body>
-		<div class="container">
-			<header class="header">
-				<h1 id="title">Survey Form</h1>
-				<p id="description" class="description">
-					I appreciate the feedback about my projects!
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;1,300;1,500&display=swap"
+		rel="stylesheet" />
+	<link href="./src/styles.css" rel="stylesheet" />
+	<title>Survey Form</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<h1 id="title">Survey Form</h1>
+			<p id="description" class="description">
+				I appreciate the feedback about my projects!
+			</p>
+		</header>
+		<form id="survey-form">
+			<div class="form-group">
+				<label id="name-label" for="name">Name</label>
+				<input type="text" name="name" id="name" class="form-style" placeholder="enter your name" required />
+			</div>
+			<div class="form-group">
+				<label id="email-label" for="email">Email</label>
+				<input type="email" name="email" id="email" class="form-style" placeholder="enter your email"
+					required />
+			</div>
+			<div class="form-group">
+				<label id="number-label" for="number">Years of developer experience
+				</label>
+				<input type="number" name="age" id="number" min="0" max="50" class="form-style" placeholder="0" />
+			</div>
+			<div class="form-group">
+				<p>Which option best describes your current position?</p>
+				<select id="dropdown" name="role" class="form-style" required>
+					<option disabled selected value>Select the best option</option>
+					<option value="jr-fe-job">Junior Frontend Developer</option>
+					<option value="jr-be-job">Junior Backend Developer</option>
+					<option value="mid-fe-job">Mid-level Frontend Developer</option>
+					<option value="mid-be-job">Mid-level Backend Developer</option>
+					<option value="senior-fs-job">Senior Fullstack Developer</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<p>
+					Would you be willing to give a letter of recommendation?
 				</p>
-			</header>
-			<form id="survey-form">
-				<div class="form-group">
-					<label id="name-label" for="name">Name</label>
-					<input
-						type="text"
-						name="name"
-						id="name"
-						class="form-style"
-						placeholder="enter your name"
-						required
-					/>
-				</div>
-				<div class="form-group">
-					<label id="email-label" for="email">Email</label>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						class="form-style"
-						placeholder="enter your email"
-						required
-					/>
-				</div>
-				<div class="form-group">
-					<label id="number-label" for="number"
-						>Years of developer experience
-					</label>
-					<input
-						type="number"
-						name="age"
-						id="number"
-						min="0"
-						max="50"
-						class="form-style"
-						placeholder="0"
-					/>
-				</div>
-				<div class="form-group">
-					<p>Which option best describes your current position?</p>
-					<select
-						id="dropdown"
-						name="role"
-						class="form-style"
-						required
-					>
-						<option disabled selected value
-							>Select the best option</option
-						>
-						<option value="jr-fe-job"
-							>Junior Frontend Developer</option
-						>
-						<option value="jr-be-job"
-							>Junior Backend Developer</option
-						>
-						<option value="mid-fe-job"
-							>Mid-level Frontend Developer</option
-						>
-						<option value="mid-be-job"
-							>Mid-level Backend Developer</option
-						>
-						<option value="senior-fs-job"
-							>Senior Fullstack Developer</option
-						>
-					</select>
-				</div>
+				<label>
+					<input name="user-recommend" value="yes" type="radio" class="input-radio" checked />Yes! Email me!
+				</label>
+				<label>
+					<input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe. Show me more of
+					your work.
+				</label>
 
-				<div class="form-group">
-					<p>
-						Would you be willing to give a letter of recommendation?
-					</p>
-					<label>
-						<input
-							name="user-recommend"
-							value="yes"
-							type="radio"
-							class="input-radio"
-							checked
-						/>Yes! Email me!
-					</label>
-					<label>
-						<input
-							name="user-recommend"
-							value="maybe"
-							type="radio"
-							class="input-radio"
-						/>Maybe. Show me more of your work.
-					</label>
+				<label><input name="user-recommend" value="no" type="radio" class="input-radio" />No. Keep practicing
+					and learning!
+				</label>
+			</div>
 
-					<label
-						><input
-							name="user-recommend"
-							value="no"
-							type="radio"
-							class="input-radio"
-						/>No. Keep practicing and learning!
-					</label>
-				</div>
+			<div class="form-group">
+				<p>
+					What skill of mine needs the most work?
+				</p>
+				<select id="most-like" name="mostLike" class="form-style" required>
+					<option disabled selected value>Select an option</option>
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+					<option value="javascript">Javascript</option>
+					<option value="code-cleanliness">Code Cleanliness</option>
+				</select>
+			</div>
 
-				<div class="form-group">
-					<p>
-						What skill of mine needs the most work?
-					</p>
-					<select
-						id="most-like"
-						name="mostLike"
-						class="form-style"
-						required
-					>
-						<option disabled selected value
-							>Select an option</option
-						>
-						<option value="html">HTML</option>
-						<option value="css">CSS</option>
-						<option value="javascript">Javascript</option>
-						<option value="code-cleanliness"
-							>Code Cleanliness</option
-						>
-					</select>
-				</div>
+			<div class="form-group">
+				<p>
+					What skill or language should I work on next?
+					<span class="clue">(Check all that apply)</span>
+				</p>
 
-				<div class="form-group">
-					<p>
-						What skill or language should I work on next?
-						<span class="clue">(Check all that apply)</span>
-					</p>
+				<label><input name="prefer" value="node" type="checkbox" class="input-checkbox" />node</label>
+				<label>
+					<input name="prefer" value="git-github" type="checkbox" class="input-checkbox" />git-github</label>
+				<label><input name="prefer" value="react" type="checkbox" class="input-checkbox" />react</label>
+				<label><input name="prefer" value="databases" type="checkbox" class="input-checkbox" />databases</label>
+				<label><input name="prefer" value="firebase" type="checkbox" class="input-checkbox" />firebase</label>
+				<label><input name="prefer" value="python" type="checkbox" class="input-checkbox" />python</label>
+				<label><input name="prefer" value="java" type="checkbox" class="input-checkbox" />java</label>
+			</div>
 
-					<label
-						><input
-							name="prefer"
-							value="node"
-							type="checkbox"
-							class="input-checkbox"
-						/>node</label
-					>
-					<label>
-						<input
-							name="prefer"
-							value="git-github"
-							type="checkbox"
-							class="input-checkbox"
-						/>git-github</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="react"
-							type="checkbox"
-							class="input-checkbox"
-						/>react</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="databases"
-							type="checkbox"
-							class="input-checkbox"
-						/>databases</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="firebase"
-							type="checkbox"
-							class="input-checkbox"
-						/>firebase</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="python"
-							type="checkbox"
-							class="input-checkbox"
-						/>python</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="java"
-							type="checkbox"
-							class="input-checkbox"
-						/>java</label
-					>
-				</div>
+			<div class="form-group">
+				<p>Please leave any other feedback below:</p>
+				<textarea id="comments" class="input-textarea" name="comment"
+					placeholder="type your feedback here"></textarea>
+			</div>
 
-				<div class="form-group">
-					<p>Please leave any other feedback below:</p>
-					<textarea
-						id="comments"
-						class="input-textarea"
-						name="comment"
-						placeholder="type your feedback here"
-					></textarea>
-				</div>
+			<div class="form-group">
+				<button type="submit" id="submit" class="submit-button">
+					Submit
+				</button>
+			</div>
+		</form>
+		<footer>created by Heather Church Oct, 28, 2020</footer>
+	</div>
 
-				<div class="form-group">
-					<button type="submit" id="submit" class="submit-button">
-						Submit
-					</button>
-				</div>
-			</form>
-			<footer>created by Heather Church Oct, 28, 2020</footer>
-		</div>
+	<script src="src/index.js"></script>
+</body>
 
-		<script src="src/index.js"></script>
-		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-	</body>
 </html>
